@@ -12,9 +12,9 @@ body, html {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Центрирование элементов */
     align-items: center;
-    padding: 10px 20px;
+    height: 100px;
     background-color: #f4f4f4;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -24,20 +24,24 @@ header {
     height: auto;
 }
 
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 nav ul {
     list-style: none;
     display: flex;
-    gap: 30px;
-}
-
-nav ul li {
-    display: inline;
+    gap: 80px; /* Увеличенное расстояние между кнопками */
+    align-items: center;
+    margin-left: 50px; /* Смещение меню ближе к центру */
 }
 
 nav ul li a {
     text-decoration: none;
     color: #333;
-    font-size: 18px;
+    font-size: 24px; /* Увеличенный размер шрифта для меню */
     transition: color 0.3s ease;
 }
 
@@ -45,31 +49,33 @@ nav ul li a:hover {
     color: #000;
 }
 
-
+/* Стили для контейнера звонка */
 .call-container {
-    background-color: #87CEEB;
-    border-radius: 8px; 
-    padding: 8px; 
+    position: absolute;
+    left: 20%; /* Позиционирование ближе к центру, с левой стороны */
+    background-color: #87CEEB; /* Голубой цвет фона */
+    border-radius: 8px;
+    padding: 10px;
 }
 
-
+/* Стили для кнопки звонка */
 .call-button {
-    color: white; 
-    padding: 10px 15px; 
-    border-radius: 5px; 
-    font-size: 18px;
-    text-decoration: none; 
-    display: block; 
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 24px; /* Увеличенный текст звонка */
+    text-decoration: none;
+    display: block;
 }
 
 .call-button:hover {
-    background-color: #0056b3; 
+    background-color: #0056b3;
 }
 
-
+/* Стили для полноэкранного слайдера */
 .slider {
     width: 100%;
-    height: 100vh; 
+    height: 100vh; /* Высота слайдера на весь экран */
     overflow: hidden;
     position: relative;
 }
@@ -77,14 +83,14 @@ nav ul li a:hover {
 .slides {
     display: flex;
     width: 400%;
-    height: 100%; 
+    height: 100%; /* Высота слайдов на весь экран */
     animation: slide 12s infinite;
 }
 
 .slides img {
     width: 100%;
-    height: 100%; 
-    object-fit: cover; 
+    height: 100%; /* Изображения растягиваются на весь экран */
+    object-fit: cover; /* Картинки сохраняют пропорции */
 }
 
 @keyframes slide {
@@ -105,14 +111,14 @@ nav ul li a:hover {
     }
 }
 
-
+/* Стили для статичного текста */
 .static-text {
     position: absolute;
-    left: 5%;
+    left: 50%;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
     color: white;
-    text-align: left;
+    text-align: center;
 }
 
 .static-text h1 {
@@ -129,11 +135,11 @@ nav ul li a:hover {
     margin: 0;
 }
 
-
+/* Стили для блока с текстом на белом фоне */
 .info {
     background-color: #fff;
     padding: 50px 20px;
-    text-align: left;
+    text-align: center; /* Центрирование текста */
 }
 
 .info p {
