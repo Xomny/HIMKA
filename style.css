@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #000;
+}
+
+
+.call-container {
+    background-color: #87CEEB;
+    border-radius: 8px; 
+    padding: 8px; 
+}
+
+
+.call-button {
+    color: white; 
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    font-size: 18px;
+    text-decoration: none; 
+    display: block; 
+}
+
+.call-button:hover {
+    background-color: #0056b3; 
+}
+
+
+.slider {
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    width: 400%;
+    height: 100%; 
+    animation: slide 12s infinite;
+}
+
+.slides img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.static-text {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: left;
+}
+
+.static-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.static-text p {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin: 0;
+}
+
+
+.info {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: left;
+}
+
+.info p {
+    font-size: 20px;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
